@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="style.CSS" />
+</head>
+
+<body class="bg-purple-100 min-h-screen p-4 font-sans">
+    <div class="max-w-5xl mx-auto">
+        <nav class="text-center text-4xl font-bold bg-purple-300 py-4 mb-6 rounded shadow">
+            🌦️ Weather Dashboard
+        </nav>
+
+        <div class="flex flex-col md:flex-row gap-4">
+            <!-- Left Section -->
+            <div class=" bg-white  p-4 rounded shadow">
+                <p class="text-xl font-semibold mb-2">Enter a City Name</p>
+                <input type="text" id="inputData" placeholder="Enter city" class="w-full p-2 mb-2 border rounded text-black" />
+                <button id="searchButton" class="bg-pink-400 text-white px-4 py-2 rounded w-full mb-2">🔍 Search</button>
+                <button id="toggleUnitButton" class="bg-yellow-300 px-4 py-2 rounded w-full mb-2">🌡️ Switch to °F</button>
+                <button id="currentLocationButton" class="bg-blue-400 text-white px-4 py-2 rounded w-full mb-2">📍 Current Location</button>
+                <ul id="history" class="mt-4 list-none pl-5 text-black"></ul>
+            </div>
+
+            <!-- Right Section -->
+            <div id="weatherDataContainer" class="md:w-2/3 space-y-4 "></div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
